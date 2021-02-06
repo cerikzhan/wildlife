@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd6326;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  color: #f7f7f7;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 65px;
+}
+
+header nav ul img {
+  width: 24px;
+  height: 24px;
+}
+
+header nav ul .sign-in {
+  border: 1px solid #cd6326;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+header nav ul .sign-in:hover {
+  color: #f7f7f7;
+  background-color: #cd6326;
+}
+
+.survival {
+  background: url("../img/header.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0 240px 0;
+}
+
+.survival h1 {
+  color: #cd6326;
+  font-size: 48px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.survival p {
+  max-width: 274px;
+  color: #f7f7f7;
+  margin: 68px 0 49px 0;
+}
+
+.survival a {
+  display: inline-block;
+  background-color: #cd6326;
+  border-radius: 5px;
+  padding: 18px 52px;
+  width: 160px;
+  height: 60px;
+}
+
+.survival a:hover {
+  color: #f7f7f7;
+  background-color: #e39128;
+}
+/*# sourceMappingURL=style.css.map */

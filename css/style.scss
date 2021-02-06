@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+// Variables
+// Colors
+$orange-main: #cd6326;
+$orange-light: #e39128;
+$orange-dark: #8f5613;
+$font-dark: #333;
+$font-grey: #666;
+$font-light: #f7f7f7;
+$bg-color-header: #02160b;
+$bg-color-latest: #ccc;
+$bg-color-footer: #181617;
+
+// Mesurment
+$layout-width: 1440px;
+$container-width: 1200px;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, 
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $font-dark;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: $font-light;
+    text-decoration: none;
+
+    &:hover {
+        color: $orange-main;
+    }
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    color: $font-light;
+
+    nav {
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 65px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .sign-in {
+                border: 1px solid $orange-main;
+                border-radius: 5px;
+                padding: 5px 15px;
+
+                &:hover {
+                    color: $font-light;
+                    background-color: $orange-main;
+                }
+            }
+        }
+    }
+}
+
+.survival {
+    background: url('../img/header.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0 240px 0;
+
+    h1 {
+        color: $orange-main;
+        font-size: 48px;
+        letter-spacing: 3px;
+        font-weight: 600;
+    }
+
+    p {
+        max-width: 274px;
+        color: $font-light;
+        margin: 68px 0 49px 0;
+    }
+
+    a {
+        display: inline-block;
+        background-color: $orange-main;
+        border-radius: 5px;
+        padding: 18px 52px;
+        width: 160px;
+        height: 60px;
+
+        &:hover {
+            color: $font-light;
+            background-color: $orange-light;
+        }
+    }
+
+    
+}
