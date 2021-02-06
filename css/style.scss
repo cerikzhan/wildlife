@@ -39,6 +39,10 @@ a {
     &:hover {
         color: $orange-main;
     }
+
+    &:active {
+        color: $orange-dark;
+    }
 }
 
 .container {
@@ -58,10 +62,15 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        a {
+        .logo {
             display: flex;
+            font-size: 24px;
             align-items: center;
             gap: 16px;
+
+            svg:hover path {
+                fill: $orange-main;
+            }
         }
 
         ul {
@@ -74,6 +83,10 @@ header {
                 height: 24px;
             }
 
+            .search svg:hover path {
+                fill: $orange-main;
+            }
+
             .sign-in {
                 border: 1px solid $orange-main;
                 border-radius: 5px;
@@ -82,6 +95,10 @@ header {
                 &:hover {
                     color: $font-light;
                     background-color: $orange-main;
+                }
+        
+                &:active {
+                    background-color: $orange-dark;
                 }
             }
         }
@@ -119,6 +136,10 @@ header {
         &:hover {
             color: $font-light;
             background-color: $orange-light;
+        }
+        
+        &:active {
+            background-color: $orange-dark;
         }
     }
 

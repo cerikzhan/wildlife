@@ -25,6 +25,10 @@ a:hover {
   color: #cd6326;
 }
 
+a:active {
+  color: #8f5613;
+}
+
 .container {
   max-width: 1220px;
   margin: 0 auto;
@@ -50,14 +54,19 @@ header nav {
           justify-content: space-between;
 }
 
-header nav a {
+header nav .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 24px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 16px;
+}
+
+header nav .logo svg:hover path {
+  fill: #cd6326;
 }
 
 header nav ul {
@@ -75,6 +84,10 @@ header nav ul img {
   height: 24px;
 }
 
+header nav ul .search svg:hover path {
+  fill: #cd6326;
+}
+
 header nav ul .sign-in {
   border: 1px solid #cd6326;
   border-radius: 5px;
@@ -84,6 +97,10 @@ header nav ul .sign-in {
 header nav ul .sign-in:hover {
   color: #f7f7f7;
   background-color: #cd6326;
+}
+
+header nav ul .sign-in:active {
+  background-color: #8f5613;
 }
 
 .survival {
@@ -119,5 +136,9 @@ header nav ul .sign-in:hover {
 .survival a:hover {
   color: #f7f7f7;
   background-color: #e39128;
+}
+
+.survival a:active {
+  background-color: #8f5613;
 }
 /*# sourceMappingURL=style.css.map */
