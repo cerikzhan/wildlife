@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // Variables
 // Colors
 $orange-main: #cd6326;
@@ -64,9 +64,10 @@ header {
 
         .logo {
             display: flex;
-            font-size: 24px;
             align-items: center;
             gap: 16px;
+            font-size: 32px;
+            font-weight: 400;
 
             svg:hover path {
                 fill: $orange-main;
@@ -77,6 +78,7 @@ header {
             display: flex;
             align-items: center;
             gap: 65px;
+            font-size: 23px;
 
             img {
                 width: 24px;
@@ -90,7 +92,8 @@ header {
             .sign-in {
                 border: 1px solid $orange-main;
                 border-radius: 5px;
-                padding: 5px 15px;
+                padding: 8px 23px;
+                font-family: 'Roboto', sans-serif;
 
                 &:hover {
                     color: $font-light;
@@ -110,28 +113,32 @@ header {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    padding: 200px 0 240px 0;
+    padding: 204px 0 240px 0;
 
     h1 {
         color: $orange-main;
         font-size: 48px;
-        letter-spacing: 3px;
-        font-weight: 600;
+        letter-spacing: 2px;
+        font-weight: 400;
     }
 
     p {
         max-width: 274px;
         color: $font-light;
-        margin: 68px 0 49px 0;
+        margin: 57px 0 49px 0;
+        font-size: 18px;
+        line-height: 1.5;
     }
 
     a {
         display: inline-block;
         background-color: $orange-main;
         border-radius: 5px;
-        padding: 18px 52px;
+        padding: 14px 45px;
         width: 160px;
         height: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
 
         &:hover {
             color: $font-light;
@@ -142,6 +149,161 @@ header {
             background-color: $orange-dark;
         }
     }
-
-    
 }
+
+.articles {
+    background-color: $bg-color-latest;
+    padding: 147px 0 120px 0;
+
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 48px;
+    }
+
+    .lead {
+        text-align: center;
+        margin: 26px 0 120px 0;
+        font-size: 24px;
+    }
+
+    .posts {
+        display: flex;
+        gap: 60px;
+        justify-content: center;
+
+        .post {
+            position: relative;
+
+            img {
+                width: 300px;
+                height: 360px;
+            }
+
+            .desc {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color: $font-light;
+
+                h4 {
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 22px;
+                }
+
+                p {
+                    text-align: center;
+                    margin: 15px 0 47px 0;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+.newsletter {
+    background-color: $bg-color-latest;
+    padding: 117px 0 239px 0;
+
+    h3 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 27px;
+        margin-bottom: 61px;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+
+        .email-input {
+            background-color: $bg-color-latest;
+            padding-left: 14px;
+            border: 1px solid $font-grey;
+            border-right: none;
+            width: 540px;
+            height: 62px;
+            font-size: 23px;
+
+            &:focus {
+                border: none;
+            }
+        }
+
+        .submit-btn {
+            background-color: $orange-main;
+            border: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            width: 120px;
+            height: 62px;          
+            color: $font-light;
+            font-size: 23px;
+
+            &:hover {
+                background-color: $orange-light;
+            }
+
+            &:active {
+                background-color: $orange-dark;
+            }
+        }
+    }
+}
+
+footer {
+    background: url(../img/footer.jpg);
+    padding: 149px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .branding {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            a {
+                display: inline-block;
+                font-size: 32px;
+            }
+        }
+
+        .footer-menu {
+            margin-left: 13px;
+            ul {
+                display: flex;
+                gap: 89px;
+                font-size: 23px;
+            }
+        }
+
+        .social-media {
+            ul {
+                display: flex;
+                align-content: center;
+                gap: 27px;
+
+                a {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    padding-top: 5px;
+                    background-color: $font-light;
+                    border-radius: 20px;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: $orange-light;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
