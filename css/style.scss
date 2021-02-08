@@ -78,6 +78,7 @@ header {
     bottom: 0;
     max-width: 1220px;
     width: 100%;
+    height: 110px;
     color: $font-light;
     display: flex;
     justify-content: space-between;
@@ -277,6 +278,7 @@ header {
             border-bottom-right-radius: 5px;
             width: 120px;
             height: 62px;          
+            cursor: pointer;
             color: $font-light;
             font-size: 23px;
 
@@ -322,19 +324,35 @@ footer {
                         display: inline-block;
                         width: 40px;
                         height: 40px;
+                        border-radius: 20px;
+
+                        &:hover {
+                            background: $orange-main;
+                            opacity: .8;
+                        }
+
+                        &:active {
+                            background: $orange-dark;
+                            opacity: .8;
+                        }
                     }
+
 
                     .facebook {
                         background: url(../img/facebook.svg);
+                        background-repeat: no-repeat;
                     }
                     .instagram {
                         background: url(../img/instagram.svg);
+                        background-repeat: no-repeat;
                     }
                     .pinterest {
                         background: url(../img/pinterest.svg);
+                        background-repeat: no-repeat;
                     }
                     .telegram {
                         background: url(../img/telegram.svg);
+                        background-repeat: no-repeat;
                     }
                 }
 
