@@ -30,32 +30,18 @@ a:active {
   color: #8f5613;
 }
 
+.layout {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .container {
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-header {
-  position: absolute;
-  width: 100%;
-  color: #f7f7f7;
-}
-
-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header nav .logo {
+.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,96 +49,122 @@ header nav .logo {
       -ms-flex-align: center;
           align-items: center;
   gap: 16px;
+  font-family: 'Roboto', sans-serif;
   font-size: 32px;
   font-weight: 400;
 }
 
-header nav .logo svg:hover path {
+.logo svg:hover path {
   fill: #cd6326;
 }
 
-header nav ul {
+header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 1220px;
+  width: 100%;
+  color: #f7f7f7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 65px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 14px;
+  gap: 63px;
   font-size: 23px;
 }
 
-header nav ul img {
+header ul img {
   width: 24px;
   height: 24px;
 }
 
-header nav ul .search svg:hover path {
+header ul .search svg:hover path {
   fill: #cd6326;
 }
 
-header nav ul .sign-in {
+header ul .sign-in {
   border: 1px solid #cd6326;
   border-radius: 5px;
-  padding: 8px 23px;
+  padding: 9px 25px;
   font-family: 'Roboto', sans-serif;
 }
 
-header nav ul .sign-in:hover {
+header ul .sign-in:hover {
   color: #f7f7f7;
   background-color: #cd6326;
 }
 
-header nav ul .sign-in:active {
+header ul .sign-in:active {
   background-color: #8f5613;
 }
 
 .survival {
+  background-color: #02160b;
+  position: relative;
+}
+
+.survival .layout {
   background: url("../img/header.png");
-  height: 100vh;
   background-size: cover;
   background-position: center;
   padding: 204px 0 240px 0;
 }
 
-.survival h1 {
+.survival .layout h1 {
   color: #cd6326;
   font-size: 48px;
   letter-spacing: 2px;
   font-weight: 400;
 }
 
-.survival p {
+.survival .layout p {
   max-width: 274px;
   color: #f7f7f7;
-  margin: 57px 0 49px 0;
+  margin: 57px 0 48px 0;
   font-size: 18px;
   line-height: 1.5;
 }
 
-.survival a {
+.survival .layout .donation {
   display: inline-block;
   background-color: #cd6326;
   border-radius: 5px;
-  padding: 14px 45px;
+  padding: 14px 44px;
   width: 160px;
   height: 60px;
   font-family: 'Roboto', sans-serif;
   font-size: 23px;
 }
 
-.survival a:hover {
+.survival .layout .donation:hover {
   color: #f7f7f7;
   background-color: #e39128;
 }
 
-.survival a:active {
+.survival .layout .donation:active {
   background-color: #8f5613;
 }
 
 .articles {
   background-color: #ccc;
-  padding: 147px 0 120px 0;
+  padding: 123px 0 120px 0;
 }
 
 .articles h2 {
@@ -163,7 +175,7 @@ header nav ul .sign-in:active {
 
 .articles .lead {
   text-align: center;
-  margin: 26px 0 120px 0;
+  margin: 24px 0 122px 0;
   font-size: 24px;
 }
 
@@ -175,6 +187,7 @@ header nav ul .sign-in:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .articles .posts .post {
@@ -206,9 +219,29 @@ header nav ul .sign-in:active {
   font-size: 17px;
 }
 
+.articles .posts .left-arrow {
+  position: absolute;
+  top: 145px;
+  left: 0;
+}
+
+.articles .posts .left-arrow svg:hover path {
+  fill: #cd6326;
+}
+
+.articles .posts .right-arrow {
+  position: absolute;
+  top: 145px;
+  right: 0;
+}
+
+.articles .posts .right-arrow svg:hover path {
+  fill: #cd6326;
+}
+
 .newsletter {
   background-color: #ccc;
-  padding: 117px 0 239px 0;
+  padding: 116px 0 239px 0;
 }
 
 .newsletter h3 {
@@ -229,11 +262,12 @@ header nav ul .sign-in:active {
 
 .newsletter form .email-input {
   background-color: #ccc;
-  padding-left: 14px;
   border: 1px solid #666;
   border-right: none;
-  width: 540px;
+  width: 541px;
   height: 62px;
+  padding-left: 14px;
+  margin-left: -2px;
   font-size: 23px;
 }
 
@@ -261,11 +295,15 @@ header nav ul .sign-in:active {
 }
 
 footer {
+  background-color: #181617;
+}
+
+footer .layout {
   background: url(../img/footer.jpg);
   padding: 149px 0;
 }
 
-footer .container {
+footer .layout .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,26 +315,11 @@ footer .container {
           align-items: center;
 }
 
-footer .container .branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .container .branding a {
-  display: inline-block;
-  font-size: 32px;
-}
-
-footer .container .footer-menu {
+footer .layout .container .footer-menu {
   margin-left: 13px;
 }
 
-footer .container .footer-menu ul {
+footer .layout .container .footer-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,26 +327,33 @@ footer .container .footer-menu ul {
   font-size: 23px;
 }
 
-footer .container .social-media ul {
+footer .layout .container .social-media ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
   gap: 27px;
+  margin-top: 4px;
 }
 
-footer .container .social-media ul a {
-  display: block;
+footer .layout .container .social-media ul a {
+  display: inline-block;
   width: 40px;
   height: 40px;
-  padding-top: 5px;
-  background-color: #f7f7f7;
-  border-radius: 20px;
-  text-align: center;
 }
 
-footer .container .social-media ul a:hover {
-  background-color: #e39128;
+footer .layout .container .social-media ul .facebook {
+  background: url(../img/facebook.svg);
+}
+
+footer .layout .container .social-media ul .instagram {
+  background: url(../img/instagram.svg);
+}
+
+footer .layout .container .social-media ul .pinterest {
+  background: url(../img/pinterest.svg);
+}
+
+footer .layout .container .social-media ul .telegram {
+  background: url(../img/telegram.svg);
 }
 /*# sourceMappingURL=style.css.map */

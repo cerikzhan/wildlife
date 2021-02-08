@@ -45,115 +45,131 @@ a {
     }
 }
 
+.layout {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .container {
     max-width: 1220px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+
+    svg:hover path {
+        fill: $orange-main;
+    }
+}
+
 header {
     position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 1220px;
     width: 100%;
     color: $font-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
+    margin: 0 auto;
+    
 
-    nav {
+    ul {
         display: flex;
-        padding: 20px 0;
-        align-items: center;
-        justify-content: space-between;
+        padding-top: 14px;
+        gap: 63px;
+        font-size: 23px;
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            font-size: 32px;
-            font-weight: 400;
-
-            svg:hover path {
-                fill: $orange-main;
-            }
+        img {
+            width: 24px;
+            height: 24px;
         }
 
-        ul {
-            display: flex;
-            align-items: center;
-            gap: 65px;
-            font-size: 23px;
+        .search svg:hover path {
+            fill: $orange-main;
+        }
 
-            img {
-                width: 24px;
-                height: 24px;
+        .sign-in {
+            border: 1px solid $orange-main;
+            border-radius: 5px;
+            padding: 9px 25px;
+            font-family: 'Roboto', sans-serif;
+
+            &:hover {
+                color: $font-light;
+                background-color: $orange-main;
             }
-
-            .search svg:hover path {
-                fill: $orange-main;
-            }
-
-            .sign-in {
-                border: 1px solid $orange-main;
-                border-radius: 5px;
-                padding: 8px 23px;
-                font-family: 'Roboto', sans-serif;
-
-                &:hover {
-                    color: $font-light;
-                    background-color: $orange-main;
-                }
-        
-                &:active {
-                    background-color: $orange-dark;
-                }
+    
+            &:active {
+                background-color: $orange-dark;
             }
         }
     }
 }
 
 .survival {
-    background: url('../img/header.png');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    padding: 204px 0 240px 0;
+    background-color: $bg-color-header;
+    position: relative;
 
-    h1 {
-        color: $orange-main;
-        font-size: 48px;
-        letter-spacing: 2px;
-        font-weight: 400;
-    }
+    .layout {
+        background: url('../img/header.png');
+        background-size: cover;
+        background-position: center;
+        padding: 204px 0 240px 0;
+    
 
-    p {
-        max-width: 274px;
-        color: $font-light;
-        margin: 57px 0 49px 0;
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-    a {
-        display: inline-block;
-        background-color: $orange-main;
-        border-radius: 5px;
-        padding: 14px 45px;
-        width: 160px;
-        height: 60px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 23px;
-
-        &:hover {
-            color: $font-light;
-            background-color: $orange-light;
+        h1 {
+            color: $orange-main;
+            font-size: 48px;
+            letter-spacing: 2px;
+            font-weight: 400;
         }
-        
-        &:active {
-            background-color: $orange-dark;
+
+        p {
+            max-width: 274px;
+            color: $font-light;
+            margin: 57px 0 48px 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .donation {
+            display: inline-block;
+            background-color: $orange-main;
+            border-radius: 5px;
+            padding: 14px 44px;
+            width: 160px;
+            height: 60px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 23px;
+
+            &:hover {
+                color: $font-light;
+                background-color: $orange-light;
+            }
+            
+            &:active {
+                background-color: $orange-dark;
+            }
         }
     }
 }
 
 .articles {
     background-color: $bg-color-latest;
-    padding: 147px 0 120px 0;
+    padding: 123px 0 120px 0;
 
     h2 {
         text-align: center;
@@ -163,7 +179,7 @@ header {
 
     .lead {
         text-align: center;
-        margin: 26px 0 120px 0;
+        margin: 24px 0 122px 0;
         font-size: 24px;
     }
 
@@ -171,6 +187,7 @@ header {
         display: flex;
         gap: 60px;
         justify-content: center;
+        position: relative;
 
         .post {
             position: relative;
@@ -200,12 +217,32 @@ header {
                 }
             }
         }
+
+        .left-arrow {
+            position: absolute;
+            top: 145px;
+            left: 0;
+
+            svg:hover path {
+                fill: $orange-main;
+            }
+        }
+
+        .right-arrow {
+            position: absolute;
+            top: 145px;
+            right: 0;
+
+            svg:hover path {
+                fill: $orange-main;
+            }
+        }
     }
 }
 
 .newsletter {
     background-color: $bg-color-latest;
-    padding: 117px 0 239px 0;
+    padding: 116px 0 239px 0;
 
     h3 {
         text-align: center;
@@ -220,11 +257,12 @@ header {
 
         .email-input {
             background-color: $bg-color-latest;
-            padding-left: 14px;
             border: 1px solid $font-grey;
             border-right: none;
-            width: 540px;
+            width: 541px;
             height: 62px;
+            padding-left: 14px;
+            margin-left: -2px;
             font-size: 23px;
 
             &:focus {
@@ -254,55 +292,53 @@ header {
 }
 
 footer {
-    background: url(../img/footer.jpg);
-    padding: 149px 0;
+    background-color: $bg-color-footer;
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .layout {
+        background: url(../img/footer.jpg);
+        padding: 149px 0;
 
-        .branding {
+        .container {
             display: flex;
-            gap: 16px;
+            justify-content: space-between;
             align-items: center;
 
-            a {
-                display: inline-block;
-                font-size: 32px;
-            }
-        }
-
-        .footer-menu {
-            margin-left: 13px;
-            ul {
-                display: flex;
-                gap: 89px;
-                font-size: 23px;
-            }
-        }
-
-        .social-media {
-            ul {
-                display: flex;
-                align-content: center;
-                gap: 27px;
-
-                a {
-                    display: block;
-                    width: 40px;
-                    height: 40px;
-                    padding-top: 5px;
-                    background-color: $font-light;
-                    border-radius: 20px;
-                    text-align: center;
-
-                    &:hover {
-                        background-color: $orange-light;
-                    }
+            .footer-menu {
+                margin-left: 13px;
+                ul {
+                    display: flex;
+                    gap: 89px;
+                    font-size: 23px;
                 }
             }
 
+            .social-media {
+                ul {
+                    display: flex;
+                    gap: 27px;
+                    margin-top: 4px;
+
+                    a {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    .facebook {
+                        background: url(../img/facebook.svg);
+                    }
+                    .instagram {
+                        background: url(../img/instagram.svg);
+                    }
+                    .pinterest {
+                        background: url(../img/pinterest.svg);
+                    }
+                    .telegram {
+                        background: url(../img/telegram.svg);
+                    }
+                }
+
+            }
         }
     }
 }
