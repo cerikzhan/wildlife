@@ -26,6 +26,8 @@ html,
 body {
     font-family: 'Open Sans', sans-serif;
     color: $font-dark;
+    overflow-x: hidden;
+
 }
 
 ul {
@@ -87,7 +89,7 @@ header {
     margin: 0 auto;
     
 
-    ul {
+    .nav-links {
         display: flex;
         padding-top: 14px;
         gap: 63px;
@@ -116,6 +118,25 @@ header {
             &:active {
                 background-color: $orange-dark;
             }
+        }
+    }
+
+    .burger {
+        display: none;
+        margin-top: 15px;
+        cursor: pointer;
+        z-index: 2;
+        
+        &:hover div {
+            background-color: $orange-main;
+        }
+        
+        div{
+            width: 25px;
+            height: 3px;
+            background-color: $font-light;
+            margin: 5px;
+            transition: all 0.3s ease;
         }
     }
 }
@@ -360,4 +381,98 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 1024px){
+    header {
+        .nav-links {
+            gap: 40px
+        }
+    }
+
+    footer .layout .container{
+        .footer-menu ul{
+            gap: 35px;
+        }
+
+        .social-media ul{
+            gap: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    header {
+        .nav-links {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 106vh;
+            background-color: $bg-color-latest;
+            margin: -20px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% / 1.3);
+            transform: translate(100%);
+            transition: transform 0.3s ease-in;
+            z-index: 1;
+            
+            li {
+                opacity: 0;
+                
+                a {
+                    color: $font-dark;
+
+                    svg path{
+                        fill: $font-dark;
+                    }
+                }
+            }
+        }
+
+        .burger {
+            display: block;
+
+        }
+
+        .nav-active{
+            transform: translate(0%);
+        }
+    }
+
+    footer .layout{
+        padding: 60px 0;
+        .container {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        background-color: $font-dark;
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+        background-color: $font-dark;
+    }
+}
+
 
