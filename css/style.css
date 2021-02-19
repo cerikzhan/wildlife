@@ -201,27 +201,54 @@ header .burger div {
   font-size: 24px;
 }
 
-.articles .posts {
+.articles .slider-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 60px;
+  gap: 28px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.articles .slider-wrapper .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.articles .slider-wrapper .posts .post {
+  position: relative;
+  width: calc(100% / 3);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
 }
 
-.articles .posts .post {
-  position: relative;
+.articles .slider-wrapper .posts .post img {
+  max-width: 300px;
+  width: 100%;
 }
 
-.articles .posts .post img {
-  width: 300px;
-  height: 360px;
-}
-
-.articles .posts .post .desc {
+.articles .slider-wrapper .posts .post .desc {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -229,41 +256,29 @@ header .burger div {
   color: #f7f7f7;
 }
 
-.articles .posts .post .desc h4 {
+.articles .slider-wrapper .posts .post .desc h4 {
   text-align: center;
   font-weight: 400;
   font-size: 22px;
 }
 
-.articles .posts .post .desc p {
+.articles .slider-wrapper .posts .post .desc p {
   text-align: center;
-  margin: 15px 0 47px 0;
+  margin: 15px 0 43px 0;
   font-size: 17px;
 }
 
-.articles .posts .left-arrow {
-  position: absolute;
-  top: 145px;
-  left: 0;
-}
-
-.articles .posts .left-arrow svg:hover path {
+.articles .slider-wrapper .left-arrow svg:hover path {
   fill: #cd6326;
 }
 
-.articles .posts .right-arrow {
-  position: absolute;
-  top: 145px;
-  right: 0;
-}
-
-.articles .posts .right-arrow svg:hover path {
+.articles .slider-wrapper .right-arrow svg:hover path {
   fill: #cd6326;
 }
 
 .newsletter {
   background-color: #ccc;
-  padding: 116px 0 239px 0;
+  padding: 120px 0 239px 0;
 }
 
 .newsletter h3 {
@@ -399,6 +414,9 @@ footer .layout .container .social-media ul .telegram {
   header .nav-links {
     gap: 40px;
   }
+  .articles .slider-wrapper .posts .post {
+    width: calc(100% / 2);
+  }
   footer .layout .container .footer-menu ul {
     gap: 35px;
   }
@@ -452,6 +470,22 @@ footer .layout .container .social-media ul .telegram {
   header .nav-active {
     -webkit-transform: translate(0%);
             transform: translate(0%);
+  }
+  .articles .slider-wrapper .posts .post {
+    width: 100%;
+  }
+  .newsletter form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .newsletter form .email-input {
+    border: 1px solid #666;
+  }
+  .newsletter form .submit-btn {
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 541px;
+    width: 100%;
   }
   footer .layout {
     padding: 60px 0;
